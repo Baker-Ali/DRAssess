@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Operation>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var operation in Model)
+        {
+            <tr>
+                <td><a href="@Url.Action("OperationDetails", new { id = operation.OperationId })">@operation.Name</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

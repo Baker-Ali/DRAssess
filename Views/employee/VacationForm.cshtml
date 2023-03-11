@@ -1,0 +1,16 @@
+﻿@model VacationRequest
+
+<h2>@Model.Employee.Name</h2>
+
+<form asp-action="VacationForm">
+    <input type="hidden" asp-for="EmployeeId" />
+    <div>
+        <label asp-for="StartDate">Start Date:</label>
+        <input type="date" asp-for="StartDate" />
+    </div>
+    <div>
+        <label asp-for="EndDate">End Date:</label>
+        <input type="date" asp-for="EndDate" />
+    </div>
+    <button type="submit">Submit</button>
+</form>

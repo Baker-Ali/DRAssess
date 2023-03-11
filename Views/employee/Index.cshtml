@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Employee>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Name</td>
+                <td>
+                    <a asp-controller="EmployeeController" asp-action="VacationForm" asp-route-employeeId="@employee.EmployeeId">Request Vacation</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
